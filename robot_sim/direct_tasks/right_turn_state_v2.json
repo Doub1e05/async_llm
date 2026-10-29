@@ -1,0 +1,17 @@
+{
+  "id": "right_turn_state_v2",
+  "scene": "warehouse",
+  "spawn": [
+    -4,
+    0.7,
+    0
+  ],
+  "goal": [
+    -3,
+    -0.3
+  ],
+  "instruction": "Reach the target on your right, then stop.",
+  "wall_limit": 180,
+  "sim_limit": 50,
+  "observation_protocol": "state_v2"
+}

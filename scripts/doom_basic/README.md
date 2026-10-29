@@ -49,3 +49,31 @@ for i in range(100):
 ```
 
 Based on HF proof of concept https://gist.github.com/justheuristic/7aa895bc00bc31c33f950ff64c04c4ca .
+
+## Reproducible headless run
+
+`run.py` packages the notebook fragment above as a bounded CLI. It validates
+the ViZDoom action mapping, records one annotated frame per decision, and writes
+the model's reasoning and probe scores to JSONL.
+
+Install the two game dependencies into the environment containing `minisgl`:
+
+```bash
+uv pip install gymnasium vizdoom
+```
+
+Then run from the repository root:
+
+```bash
+CUDA_VISIBLE_DEVICES=2 HF_HUB_OFFLINE=1 python scripts/doom_basic/run.py \
+  --model /path/to/Qwen3.5-0.8B \
+  --max-game-steps 10 \
+  --max-reasoning-tokens 32 \
+  --memory-ratio 0.5
+```
+
+The default output directory is `scripts/doom_basic/output/`:
+
+- `doom_run.gif` contains the annotated gameplay;
+- `decisions.jsonl` contains actions, candidate probabilities, reasoning,
+  rewards, and termination flags.

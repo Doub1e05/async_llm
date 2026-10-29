@@ -1,0 +1,17 @@
+{
+  "id": "straight_state_v2",
+  "scene": "warehouse",
+  "spawn": [
+    -4,
+    -3,
+    0
+  ],
+  "goal": [
+    -2.6,
+    -3
+  ],
+  "instruction": "Drive to the given target along the free corridor, then stop.",
+  "wall_limit": 150,
+  "sim_limit": 45,
+  "observation_protocol": "state_v2"
+}

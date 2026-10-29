@@ -1,0 +1,134 @@
+{
+  "wheel_radius_m": 0.022124,
+  "passive_wheel_radius_m": 0.021124,
+  "wheel_width_m": 0.01625596173107624,
+  "track_m": 0.11535586,
+  "total_mass_kg": 0.5,
+  "driven_joints": [
+    "left_middle_joint",
+    "right_middle_joint"
+  ],
+  "passive_joints": [
+    "left_front_joint",
+    "left_rear_joint",
+    "right_front_joint",
+    "right_rear_joint"
+  ],
+  "wheel_layout": {
+    "left_front": {
+      "position_m": [
+        0.05293417,
+        0.05767793,
+        0.0
+      ],
+      "driven": false,
+      "radius_m": 0.021124,
+      "sliding_friction": 0.01
+    },
+    "left_middle": {
+      "position_m": [
+        0.0,
+        0.05767793,
+        0.0
+      ],
+      "driven": true,
+      "radius_m": 0.022124,
+      "sliding_friction": 0.9
+    },
+    "left_rear": {
+      "position_m": [
+        -0.052975506,
+        0.05767793,
+        0.0
+      ],
+      "driven": false,
+      "radius_m": 0.021124,
+      "sliding_friction": 0.01
+    },
+    "right_front": {
+      "position_m": [
+        0.05293417,
+        -0.05767793,
+        0.0
+      ],
+      "driven": false,
+      "radius_m": 0.021124,
+      "sliding_friction": 0.01
+    },
+    "right_middle": {
+      "position_m": [
+        0.0,
+        -0.05767793,
+        0.0
+      ],
+      "driven": true,
+      "radius_m": 0.022124,
+      "sliding_friction": 0.9
+    },
+    "right_rear": {
+      "position_m": [
+        -0.052975506,
+        -0.05767793,
+        0.0
+      ],
+      "driven": false,
+      "radius_m": 0.021124,
+      "sliding_friction": 0.01
+    }
+  },
+  "notes": "Mass distribution, inertia, damping and motor limits are estimates. SI units. Free base and motor controllers configured in the simulator.",
+  "simulation": {
+    "linear_max": 0.2,
+    "reverse_max": 0.12,
+    "angular_max": 1.0,
+    "linear_acceleration": 0.3,
+    "linear_deceleration": 0.5,
+    "angular_acceleration": 1.5,
+    "command_timeout_wall_s": 0.6,
+    "wheel_velocity_max": 25.0,
+    "drive_torque_max_Nm": 0.03,
+    "velocity_p_gain": 0.02,
+    "velocity_i_gain": 0.03,
+    "drive_friction": 0.9,
+    "passive_friction": 0.01,
+    "joint_damping": 2e-06,
+    "step_size_s": 0.001
+  },
+  "sensor_poses_base_link_m": {
+    "laser": [
+      0.035,
+      0,
+      0.14
+    ],
+    "camera_link": [
+      0.082,
+      0,
+      0.082
+    ],
+    "imu_link": [
+      0,
+      0,
+      0.04
+    ]
+  },
+  "input_sha256": {
+    "rover_urdf/README.md": "35a41a440e5d1e7ed43b21f0ef4f3f5f7d89fd4c2a88cd8752e3d0acd6e0b4ee",
+    "rover_urdf/configuration.json": "13e4772ab64f0932679330c740376e4a212d51310f8317d129fa01950c47e3bb",
+    "rover_urdf/contact_settings.json": "3c138fd8f899e9c41da411d6e704840e5d4d9409c2f20c5585a8536f3ba0d9b2",
+    "rover_urdf/meshes/body.obj": "2e223374b4d7f838044c51704f3dbf899d637c26f90b378d8b2c98542d350fe9",
+    "rover_urdf/meshes/interior.obj": "53223c86f5f6411973859216c3d27f727b517dd4e899a12563e4e69892984e14",
+    "rover_urdf/meshes/interior.png": "4d4353b316c44f55276d337f2d584192d60a8ed404ddf7643cc3b123565b2e75",
+    "rover_urdf/meshes/left_front.obj": "41c3d4161388e8ec673b7d38e5b508894e1e69c137c3296c16a8f6f157ece239",
+    "rover_urdf/meshes/left_middle.obj": "ce4984377a71cc785504c854d5038756390dc71f7044e0c6653967fb8e7be9de",
+    "rover_urdf/meshes/left_rear.obj": "5f12108789d004a5638ca1c54d4b568d04398ca27e5bf80edb944ce276ce2097",
+    "rover_urdf/meshes/right_front.obj": "a1fd972a20fb00ec75ac55a55db7f89a9c579c1a06b3f969b3272668b6f7c267",
+    "rover_urdf/meshes/right_middle.obj": "52e27b34122916f59bdb737cfe5dc56a88ac070de1ad816b70bc8e371390fa33",
+    "rover_urdf/meshes/right_rear.obj": "7dce27ba9bcc78af9250e0f80a6a6d9d5d9d2d2a11470311dfe78cace190f9cf",
+    "rover_urdf/meshes/rover.mtl": "fea4b2d7bfae90c4b829e0078d4a938bebe3e5907fa05d9687b5537df92e72f7",
+    "rover_urdf/meshes/rover.png": "34bb6b1b01cb649e6d38a826cc7f2efa6bf2ef14571f16de6094628972a2b776",
+    "rover_urdf/provenance.json": "4948bf9b9c37fe8d34ebc3ca112b111823a7b583d175a0a6d354f994c24653f7",
+    "rover_urdf/rover.urdf": "0ec91d771db55fdd2f739347f653137354e05f49628c4b78f15e9ca3119e1db3",
+    "rover_urdf/scripts/build_urdf.py": "a2db07111909edb29e90f276802eac268c84e7512e322616c610f8afbddc9294",
+    "rover_urdf/validation_report.json": "b7b9723972fe7b65ba8ad26a017069734798ca2cb4d2735e415d796f31f11b71"
+  }
+}

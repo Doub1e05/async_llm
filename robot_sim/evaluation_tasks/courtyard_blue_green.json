@@ -1,0 +1,10 @@
+{
+  "id": "courtyard_blue_green",
+  "scene": "courtyard",
+  "instruction": "Красную станцию сегодня не обслуживаем. Сначала доставь заказ на синюю станцию, после неё — на зелёную.",
+  "expected": [
+    "blue",
+    "green"
+  ],
+  "goals": 2
+}

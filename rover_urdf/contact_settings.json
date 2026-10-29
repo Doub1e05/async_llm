@@ -1,0 +1,34 @@
+{
+  "note": "Apply in the target simulator: standard URDF does not encode portable ground friction. These are simulation assumptions, not measured tyre properties.",
+  "links": {
+    "left_front_wheel": {
+      "sliding_friction": 0.01,
+      "passive": true
+    },
+    "left_middle_wheel": {
+      "sliding_friction": 0.9,
+      "passive": false
+    },
+    "left_rear_wheel": {
+      "sliding_friction": 0.01,
+      "passive": true
+    },
+    "right_front_wheel": {
+      "sliding_friction": 0.01,
+      "passive": true
+    },
+    "right_middle_wheel": {
+      "sliding_friction": 0.9,
+      "passive": false
+    },
+    "right_rear_wheel": {
+      "sliding_friction": 0.01,
+      "passive": true
+    }
+  },
+  "mujoco": {
+    "wheel_contact_priority": 1,
+    "velocity_gain": 0.02,
+    "note": "priority=1 prevents floor friction from overriding the wheel value. Set only central motor actuators."
+  }
+}

@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="yandex_rover">
+  <material name="neutral_fallback">
+    <color rgba="0.75 0.75 0.75 1" />
+  </material>
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.006326344 -0.002392415 0.0559519" rpy="0 0 0" />
+      <mass value=".41" />
+      <inertia ixx="0.0009546777" iyy="0.0014699204" izz="0.0013856149" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual name="body_visual">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/body.obj" scale="1 1 1" />
+      </geometry>
+      <material name="neutral_fallback" />
+    </visual>
+    <visual name="interior_visual">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/interior.obj" scale="1 1 1" />
+      </geometry>
+      <material name="neutral_fallback" />
+    </visual>
+    <visual name="headlight_white_right_center">
+      <origin xyz="0.0768940525092798 -0.025446381695348033 0.056890452944578944" rpy="0 0.016609985980125672 0.0070039801895009236" />
+      <geometry>
+        <cylinder radius=".0018" length="0.022847618706327667" />
+      </geometry>
+      <material name="headlight_milk" />
+    </visual>
+    <visual name="headlight_white_right_end0">
+      <origin xyz="0.07670431657491844 -0.02544771062380413 0.0454682194219007" rpy="0 0 0" />
+      <geometry>
+        <sphere radius=".0018" />
+      </geometry>
+      <material name="headlight_milk" />
+    </visual>
+    <visual name="headlight_white_right_end1">
+      <origin xyz="0.07708378844364118 -0.025445052766891935 0.06831268646725719" rpy="0 0 0" />
+      <geometry>
+        <sphere radius=".0018" />
+      </geometry>
+      <material name="headlight_milk" />
+    </visual>
+    <visual name="headlight_white_left_center">
+      <origin xyz="0.07689631953634421 0.025893323399847845 0.057076308538218115" rpy="0 0.016609986379527993 -0.007006700595220675" />
+      <geometry>
+        <cylinder radius=".0018" length="0.022847651351705228" />
+      </geometry>
+      <material name="headlight_milk" />
+    </visual>
+    <visual name="headlight_white_left_end0">
+      <origin xyz="0.0767065833299363 0.025894652846394174 0.04565405869517847" rpy="0 0 0" />
+      <geometry>
+        <sphere radius=".0018" />
+      </geometry>
+      <material name="headlight_milk" />
+    </visual>
+    <visual name="headlight_white_left_end1">
+      <origin xyz="0.07708605574275212 0.025891993953301516 0.06849855838125776" rpy="0 0 0" />
+      <geometry>
+        <sphere radius=".0018" />
+      </geometry>
+      <material name="headlight_milk" />
+    </visual>
+    <collision name="body_collision">
+      <origin xyz="-0.006326344 -0.002392415 0.0559519" rpy="0 0 0" />
+      <geometry>
+        <box size="0.166785568 0.112858996 0.123307064" />
+      </geometry>
+    </collision>
+  </link>
+  <material name="headlight_milk">
+    <color rgba="0.88 0.86 0.80 1" />
+  </material>
+  <link name="left_front_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.015" />
+      <inertia ixx="2.003658024752769e-06" iyy="3.34667532e-06" izz="2.003658024752769e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual name="left_front_visual">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/left_front.obj" scale="1.0 1 1.0" />
+      </geometry>
+      <material name="neutral_fallback" />
+    </visual>
+    <collision name="left_front_collision">
+      <origin xyz="0 0 0" rpy="1.5707963267948966 0 0" />
+      <geometry>
+        <cylinder radius="0.021124" length="0.01625596173107624" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_front_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="left_front_wheel" />
+    <origin xyz="0.05293417 0.05767793 0.0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="0" velocity="25" />
+    <dynamics damping="0.000002" friction="0" />
+  </joint>
+  <link name="left_middle_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.015" />
+      <inertia ixx="2.165838024752769e-06" iyy="3.67103532e-06" izz="2.165838024752769e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual name="left_middle_visual">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/left_middle.obj" scale="1.0473395190304866 1 1.0473395190304866" />
+      </geometry>
+      <material name="neutral_fallback" />
+    </visual>
+    <collision name="left_middle_collision">
+      <origin xyz="0 0 0" rpy="1.5707963267948966 0 0" />
+      <geometry>
+        <cylinder radius="0.022124" length="0.01625596173107624" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_middle_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="left_middle_wheel" />
+    <origin xyz="0.0 0.05767793 0.0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.03" velocity="25" />
+    <dynamics damping="0.000002" friction="0" />
+  </joint>
+  <link name="left_rear_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.015" />
+      <inertia ixx="2.003658024752769e-06" iyy="3.34667532e-06" izz="2.003658024752769e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual name="left_rear_visual">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/left_rear.obj" scale="1.0 1 1.0" />
+      </geometry>
+      <material name="neutral_fallback" />
+    </visual>
+    <collision name="left_rear_collision">
+      <origin xyz="0 0 0" rpy="1.5707963267948966 0 0" />
+      <geometry>
+        <cylinder radius="0.021124" length="0.01625596173107624" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_rear_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="left_rear_wheel" />
+    <origin xyz="-0.052975506 0.05767793 0.0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="0" velocity="25" />
+    <dynamics damping="0.000002" friction="0" />
+  </joint>
+  <link name="right_front_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.015" />
+      <inertia ixx="2.003658024752769e-06" iyy="3.34667532e-06" izz="2.003658024752769e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual name="right_front_visual">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_front.obj" scale="1.0 1 1.0" />
+      </geometry>
+      <material name="neutral_fallback" />
+    </visual>
+    <collision name="right_front_collision">
+      <origin xyz="0 0 0" rpy="1.5707963267948966 0 0" />
+      <geometry>
+        <cylinder radius="0.021124" length="0.01625596173107624" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_front_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="right_front_wheel" />
+    <origin xyz="0.05293417 -0.05767793 0.0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="0" velocity="25" />
+    <dynamics damping="0.000002" friction="0" />
+  </joint>
+  <link name="right_middle_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.015" />
+      <inertia ixx="2.165838024752769e-06" iyy="3.67103532e-06" izz="2.165838024752769e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual name="right_middle_visual">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_middle.obj" scale="1.0473395190304866 1 1.0473395190304866" />
+      </geometry>
+      <material name="neutral_fallback" />
+    </visual>
+    <collision name="right_middle_collision">
+      <origin xyz="0 0 0" rpy="1.5707963267948966 0 0" />
+      <geometry>
+        <cylinder radius="0.022124" length="0.01625596173107624" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_middle_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="right_middle_wheel" />
+    <origin xyz="0.0 -0.05767793 0.0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.03" velocity="25" />
+    <dynamics damping="0.000002" friction="0" />
+  </joint>
+  <link name="right_rear_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.015" />
+      <inertia ixx="2.003658024752769e-06" iyy="3.34667532e-06" izz="2.003658024752769e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual name="right_rear_visual">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/right_rear.obj" scale="1.0 1 1.0" />
+      </geometry>
+      <material name="neutral_fallback" />
+    </visual>
+    <collision name="right_rear_collision">
+      <origin xyz="0 0 0" rpy="1.5707963267948966 0 0" />
+      <geometry>
+        <cylinder radius="0.021124" length="0.01625596173107624" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_rear_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="right_rear_wheel" />
+    <origin xyz="-0.052975506 -0.05767793 0.0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="0" velocity="25" />
+    <dynamics damping="0.000002" friction="0" />
+  </joint>
+  <link name="base_footprint" />
+  <joint name="footprint_to_base" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <origin xyz="0 0 0.022124" />
+  </joint>
+  <link name="laser" />
+  <joint name="laser_fixed" type="fixed">
+    <parent link="base_link" />
+    <child link="laser" />
+    <origin xyz="0.035 0 0.14" />
+  </joint>
+  <link name="camera_link" />
+  <joint name="camera_link_fixed" type="fixed">
+    <parent link="base_link" />
+    <child link="camera_link" />
+    <origin xyz="0.082 0 0.082" />
+  </joint>
+  <link name="imu_link" />
+  <joint name="imu_link_fixed" type="fixed">
+    <parent link="base_link" />
+    <child link="imu_link" />
+    <origin xyz="0 0 0.04" />
+  </joint>
+  <link name="camera_optical" />
+  <joint name="camera_optical_fixed" type="fixed">
+    <parent link="camera_link" />
+    <child link="camera_optical" />
+    <origin rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+  <link name="overview_optical" />
+  <joint name="overview_optical_fixed" type="fixed">
+    <parent link="overview_camera_link" />
+    <child link="overview_optical" />
+    <origin rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+  <link name="overview_camera_link" />
+  <joint name="overview_camera_fixed" type="fixed">
+    <parent link="base_link" />
+    <child link="overview_camera_link" />
+    <origin xyz=".36 -.45 .30" rpy="0 .30 2.246" />
+  </joint>
+</robot>

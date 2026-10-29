@@ -34,3 +34,19 @@ env/
 
 # local Doom experiment
 /scripts/doom_basic/deadly_corridor_probe.ipynb
+/scripts/doom_basic/output/
+/_vizdoom.ini
+/_vizdoom/
+
+# Robot runtime and experiment logs
+/robot_sim/.runtime/
+/robot_sim/results/
+
+
+# Keep source configuration despite the upstream blanket JSON ignore.
+!/rover_urdf/*.json
+!/mujoco_scene/*.json
+!/robot_sim/direct_tasks/*.json
+!/robot_sim/evaluation_tasks/*.json
+!/robot_sim/models/yandex_rover/specification.json
+.DS_Store

@@ -1,0 +1,8 @@
+{
+  "mujoco_version": "3.15.0",
+  "loaded_from_external_directory": true,
+  "mass_kg": 0.49999999999999994,
+  "actuators": 2,
+  "forward_displacement_m": 0.4837557992486672,
+  "passed": true
+}

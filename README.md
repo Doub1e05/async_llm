@@ -144,3 +144,9 @@ If you found this work useful, please consider citing:
       url={https://arxiv.org/abs/2609.35427},
 }
 ```
+
+## Rover experiments
+
+The rover branch adds Gazebo/ROS 2 simulation, direct LLM driving and sensor-only mapping.
+See [robot_sim/DEPLOYMENT.md](robot_sim/DEPLOYMENT.md) for the double_p environment and server setup,
+[robot_sim/ROVER.md](robot_sim/ROVER.md) for the robot, and [robot_sim/MAPPING.md](robot_sim/MAPPING.md) for SLAM.

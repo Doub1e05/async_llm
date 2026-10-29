@@ -1,0 +1,20 @@
+name: double_p
+channels:
+- robostack-jazzy
+- conda-forge
+dependencies:
+- python=3.12
+- pip
+- ros-jazzy-ros-base
+- ros-jazzy-ros-gz-bridge
+- ros-jazzy-navigation2
+- ros-jazzy-nav2-bringup
+- ros-jazzy-slam-toolbox
+- ros-jazzy-robot-localization
+- ros-jazzy-robot-state-publisher
+- gz-sim=8
+- opencv
+- numpy
+- pillow
+- pyyaml
+- libseccomp

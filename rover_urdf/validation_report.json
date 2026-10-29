@@ -1,0 +1,33 @@
+{
+  "urdf_links": 7,
+  "continuous_joints": 6,
+  "mass_kg": 0.5,
+  "relative_assets_after_copy": "passed",
+  "inertia_positive_and_triangle_inequality": "passed",
+  "mujoco": {
+    "version": "3.15.0",
+    "import_with_visuals": "passed",
+    "meshes": 8,
+    "note": "Compiler options added only in temporary test: discardvisual=false, fusestatic=false. Root is fixed unless simulator sets free base."
+  },
+  "webots_urdf_conversion": "passed including milk-white headlight update; converter only",
+  "headlights": {
+    "visual_primitives": 6,
+    "rgba": [
+      0.88,
+      0.86,
+      0.8,
+      1
+    ],
+    "mujoco_import": "passed",
+    "mass_and_joints_unchanged": true
+  },
+  "differential_preset": {
+    "drive_radius_m": 0.022124,
+    "passive_radius_m": 0.021124,
+    "scaled_visual_meshes": "passed",
+    "mujoco_import": "passed",
+    "webots_conversion": "passed",
+    "friction_settings": "contact_settings.json; must be applied by target simulator"
+  }
+}

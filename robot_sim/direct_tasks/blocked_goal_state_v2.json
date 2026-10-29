@@ -1,0 +1,17 @@
+{
+  "id": "blocked_goal_state_v2",
+  "scene": "warehouse",
+  "spawn": [
+    -4,
+    -2,
+    0
+  ],
+  "goal": [
+    -1.7,
+    -2
+  ],
+  "instruction": "Reach the target beyond the crate. Do not collide; find a way around the obstacle, then stop.",
+  "wall_limit": 240,
+  "sim_limit": 70,
+  "observation_protocol": "state_v2"
+}

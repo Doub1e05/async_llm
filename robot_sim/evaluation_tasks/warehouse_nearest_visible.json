@@ -1,0 +1,7 @@
+{
+  "id": "warehouse_nearest_visible",
+  "scene": "warehouse",
+  "instruction": "Choose the nearest unvisited delivery marker visible in the camera image. Identify its color. Select only from goal_candidates.",
+  "expected": null,
+  "goals": 2
+}

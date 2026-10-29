@@ -1,0 +1,65 @@
+goals:
+- - -1.7
+  - -2.0
+  - 0.0
+- - 1.0
+  - 0.0
+  - 0.0
+- - 4.0
+  - 2.3
+  - 0.0
+name: warehouse
+obstacles:
+- depth: 0.9
+  height: 0.8
+  material: wood
+  name: crate_a
+  width: 0.65
+  x: -2.8
+  y: -2.0
+- depth: 0.7
+  height: 0.9
+  material: wood
+  name: crate_b
+  width: 1.0
+  x: -0.3
+  y: 0.2
+- depth: 2.3
+  height: 1.2
+  material: metal
+  name: rack
+  width: 0.7
+  x: 2.3
+  y: 1.5
+- depth: 0.8
+  height: 0.3
+  material: wood
+  name: pallet
+  width: 1.4
+  x: -2.0
+  y: 1.9
+- depth: 0.06
+  height: 0.9
+  material: metal
+  name: red_stand
+  width: 0.06
+  x: -1.2
+  y: -1.5
+- depth: 0.06
+  height: 0.9
+  material: metal
+  name: blue_stand
+  width: 0.06
+  x: 1.5
+  y: 0.5
+- depth: 0.06
+  height: 0.9
+  material: metal
+  name: green_stand
+  width: 0.06
+  x: 4.5
+  y: 2.8
+spawn:
+- -4.0
+- -2.0
+- 0.0

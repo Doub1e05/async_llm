@@ -1,0 +1,10 @@
+{
+  "id": "warehouse_red_blue",
+  "scene": "warehouse",
+  "instruction": "Доставь посылку сначала к красному маркеру, затем к синему. Не посещай зелёный маркер.",
+  "expected": [
+    "red",
+    "blue"
+  ],
+  "goals": 2
+}

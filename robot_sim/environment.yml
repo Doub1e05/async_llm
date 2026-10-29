@@ -1,0 +1,18 @@
+name: async_robot_ros
+channels:
+- robostack-jazzy
+- conda-forge
+dependencies:
+- python=3.12
+- ros-jazzy-ros-base
+- ros-jazzy-ros-gz-bridge
+- gz-sim=8
+- ros-jazzy-navigation2
+- ros-jazzy-nav2-bringup
+- pillow
+- ros-jazzy-slam-toolbox
+- ros-jazzy-robot-localization
+- ros-jazzy-robot-state-publisher
+- opencv
+- numpy
+- pyyaml

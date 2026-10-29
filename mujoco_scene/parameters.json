@@ -1,0 +1,18 @@
+{
+  "source": "../00000_asm.stp",
+  "source_units": "mm",
+  "cad_to_robot": "x=-(CAD_y+5.795628626); y=CAD_x; z=CAD_z+11.189935236; then mm to m",
+  "wheel_radius_m": 0.021124,
+  "wheel_width_m": 0.01231,
+  "track_m": 0.12719633,
+  "axle_spacing_m": 0.054,
+  "total_mass_kg": 0.5,
+  "wheel_mass_kg_assumed": 0.015,
+  "drive_effort_Nm_assumed": 0.03,
+  "drive_velocity_rad_s_assumed": 25,
+  "velocity_gain_assumed": 0.001,
+  "sliding_friction_assumed": 0.65,
+  "wheel_damping_Nms_assumed": 0.000002,
+  "simplification_grid_mm": 1.0,
+  "wheel_sections": 48
+}

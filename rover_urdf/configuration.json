@@ -1,0 +1,80 @@
+{
+  "wheel_radius_m": 0.022124,
+  "passive_wheel_radius_m": 0.021124,
+  "wheel_width_m": 0.01625596173107624,
+  "track_m": 0.11535586,
+  "total_mass_kg": 0.5,
+  "driven_joints": [
+    "left_middle_joint",
+    "right_middle_joint"
+  ],
+  "passive_joints": [
+    "left_front_joint",
+    "left_rear_joint",
+    "right_front_joint",
+    "right_rear_joint"
+  ],
+  "wheel_layout": {
+    "left_front": {
+      "position_m": [
+        0.05293417,
+        0.05767793,
+        0.0
+      ],
+      "driven": false,
+      "radius_m": 0.021124,
+      "sliding_friction": 0.01
+    },
+    "left_middle": {
+      "position_m": [
+        0.0,
+        0.05767793,
+        0.0
+      ],
+      "driven": true,
+      "radius_m": 0.022124,
+      "sliding_friction": 0.9
+    },
+    "left_rear": {
+      "position_m": [
+        -0.052975506,
+        0.05767793,
+        0.0
+      ],
+      "driven": false,
+      "radius_m": 0.021124,
+      "sliding_friction": 0.01
+    },
+    "right_front": {
+      "position_m": [
+        0.05293417,
+        -0.05767793,
+        0.0
+      ],
+      "driven": false,
+      "radius_m": 0.021124,
+      "sliding_friction": 0.01
+    },
+    "right_middle": {
+      "position_m": [
+        0.0,
+        -0.05767793,
+        0.0
+      ],
+      "driven": true,
+      "radius_m": 0.022124,
+      "sliding_friction": 0.9
+    },
+    "right_rear": {
+      "position_m": [
+        -0.052975506,
+        -0.05767793,
+        0.0
+      ],
+      "driven": false,
+      "radius_m": 0.021124,
+      "sliding_friction": 0.01
+    }
+  },
+  "notes": "Mass distribution, inertia, damping and motor limits are estimates. SI units. Free base and motor controllers configured in the simulator."
+}

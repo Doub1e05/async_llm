@@ -1,0 +1,18 @@
+{
+  "id": "stop_command_state_v2",
+  "scene": "warehouse",
+  "spawn": [
+    -4,
+    -3,
+    0
+  ],
+  "goal": [
+    -2.6,
+    -3
+  ],
+  "instruction": "Halt immediately. Stay still. Return stop, not forward or a turn.",
+  "halt": true,
+  "wall_limit": 40,
+  "sim_limit": 10,
+  "observation_protocol": "state_v2"
+}

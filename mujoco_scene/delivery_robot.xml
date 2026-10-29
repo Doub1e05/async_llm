@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="delivery_robot">
+  <compiler angle="radian" meshdir="meshes" autolimits="true" />
+  <option timestep="0.001" gravity="0 0 -9.81" integrator="implicitfast" iterations="80" />
+  <default>
+    <geom friction="0.65 0.001 0.00001" solref="0.006 1" solimp="0.95 0.99 0.001" condim="3" />
+  </default>
+  <asset>
+    <mesh name="body" file="body.stl" />
+    <mesh name="sensor" file="sensor.stl" />
+    <mesh name="mast" file="mast.stl" />
+    <mesh name="flag" file="flag.stl" />
+    <mesh name="wheel" file="wheel.stl" />
+  </asset>
+  <worldbody>
+    <light pos="0 -1 2" dir="0 0 -1" />
+    <geom name="floor" type="plane" size="2 2 0.1" rgba="0.25 0.3 0.35 1" contype="2" conaffinity="1" />
+    <body name="base_link" pos="0 0 0.022124">
+      <freejoint name="floating_base" />
+      <inertial mass="0.41" pos="-0.004832387628 -0.0002545068812 0.05428990923" fullinertia="0.0007200726144 0.001184883934 0.001234605513 -1.16360873e-07 -1.036366577e-05 8.838205416e-07" />
+      <geom name="body" type="mesh" mesh="body" rgba="0.78 0.82 0.87 1" contype="1" conaffinity="2" group="0" />
+      <geom name="sensor" type="mesh" mesh="sensor" rgba="0.12 0.16 0.2 1" contype="1" conaffinity="2" group="0" />
+      <geom name="mast" type="mesh" mesh="mast" rgba="0.22 0.25 0.28 1" contype="1" conaffinity="2" group="0" />
+      <geom name="flag" type="mesh" mesh="flag" rgba="0.95 0.55 0.1 1" contype="1" conaffinity="2" group="0" />
+      <body name="left_front_wheel" pos="0.054 0.063598165 0">
+        <inertial mass="0.015" pos="0 0 0" diaginertia="1.862757785e-06 3.34667532e-06 1.862757785e-06" />
+        <joint name="left_front_joint" type="hinge" axis="0 1 0" damping="2e-06" />
+        <geom type="mesh" mesh="wheel" rgba="0.09 0.1 0.12 1" contype="0" conaffinity="0" group="1" />
+        <geom name="left_front_contact" type="cylinder" size="0.021124 0.006155" quat="0.7071067812 -0.7071067812 0 0" rgba="0 0 0 0" contype="1" conaffinity="2" group="3" />
+      </body>
+      <body name="left_middle_wheel" pos="0 0.063598165 0">
+        <inertial mass="0.015" pos="0 0 0" diaginertia="1.862757785e-06 3.34667532e-06 1.862757785e-06" />
+        <joint name="left_middle_joint" type="hinge" axis="0 1 0" damping="2e-06" />
+        <geom type="mesh" mesh="wheel" rgba="0.09 0.1 0.12 1" contype="0" conaffinity="0" group="1" />
+        <geom name="left_middle_contact" type="cylinder" size="0.021124 0.006155" quat="0.7071067812 -0.7071067812 0 0" rgba="0 0 0 0" contype="1" conaffinity="2" group="3" />
+      </body>
+      <body name="left_rear_wheel" pos="-0.054 0.063598165 0">
+        <inertial mass="0.015" pos="0 0 0" diaginertia="1.862757785e-06 3.34667532e-06 1.862757785e-06" />
+        <joint name="left_rear_joint" type="hinge" axis="0 1 0" damping="2e-06" />
+        <geom type="mesh" mesh="wheel" rgba="0.09 0.1 0.12 1" contype="0" conaffinity="0" group="1" />
+        <geom name="left_rear_contact" type="cylinder" size="0.021124 0.006155" quat="0.7071067812 -0.7071067812 0 0" rgba="0 0 0 0" contype="1" conaffinity="2" group="3" />
+      </body>
+      <body name="right_front_wheel" pos="0.054 -0.063598165 0">
+        <inertial mass="0.015" pos="0 0 0" diaginertia="1.862757785e-06 3.34667532e-06 1.862757785e-06" />
+        <joint name="right_front_joint" type="hinge" axis="0 1 0" damping="2e-06" />
+        <geom type="mesh" mesh="wheel" rgba="0.09 0.1 0.12 1" contype="0" conaffinity="0" group="1" />
+        <geom name="right_front_contact" type="cylinder" size="0.021124 0.006155" quat="0.7071067812 -0.7071067812 0 0" rgba="0 0 0 0" contype="1" conaffinity="2" group="3" />
+      </body>
+      <body name="right_middle_wheel" pos="0 -0.063598165 0">
+        <inertial mass="0.015" pos="0 0 0" diaginertia="1.862757785e-06 3.34667532e-06 1.862757785e-06" />
+        <joint name="right_middle_joint" type="hinge" axis="0 1 0" damping="2e-06" />
+        <geom type="mesh" mesh="wheel" rgba="0.09 0.1 0.12 1" contype="0" conaffinity="0" group="1" />
+        <geom name="right_middle_contact" type="cylinder" size="0.021124 0.006155" quat="0.7071067812 -0.7071067812 0 0" rgba="0 0 0 0" contype="1" conaffinity="2" group="3" />
+      </body>
+      <body name="right_rear_wheel" pos="-0.054 -0.063598165 0">
+        <inertial mass="0.015" pos="0 0 0" diaginertia="1.862757785e-06 3.34667532e-06 1.862757785e-06" />
+        <joint name="right_rear_joint" type="hinge" axis="0 1 0" damping="2e-06" />
+        <geom type="mesh" mesh="wheel" rgba="0.09 0.1 0.12 1" contype="0" conaffinity="0" group="1" />
+        <geom name="right_rear_contact" type="cylinder" size="0.021124 0.006155" quat="0.7071067812 -0.7071067812 0 0" rgba="0 0 0 0" contype="1" conaffinity="2" group="3" />
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <velocity name="left_drive" joint="left_middle_joint" kv="0.001" ctrlrange="-25 25" forcerange="-0.03 0.03" />
+    <velocity name="right_drive" joint="right_middle_joint" kv="0.001" ctrlrange="-25 25" forcerange="-0.03 0.03" />
+  </actuator>
+</mujoco>

@@ -1,0 +1,47 @@
+{
+  "page": "https://education.yandex.ru/robo/lab/sandbox/c7829a0b-957d-4073-b32e-0c9153f852d7",
+  "asset": "https://yastatic-net.ru/s3/robo-marvel/robo-marvel/releases/freeze/assets/445c13d589fea8e8.rover.glb",
+  "sha256": "311441368dad9a20ea756a4e54c1ae4b509a75a79d2b053a51f51c8003d7f53c",
+  "original_bytes": 4125440,
+  "scale_for_mujoco": 0.19264809360287705,
+  "visual_triangles": 7574,
+  "wheel_centers_m": {
+    "right_front": [
+      0.05293416976928711,
+      -0.05767792835831642,
+      0.0
+    ],
+    "left_front": [
+      0.05293416976928711,
+      0.05767792835831642,
+      0.0
+    ],
+    "left_middle": [
+      0.0,
+      0.05767792835831642,
+      0.0
+    ],
+    "left_rear": [
+      -0.05297550559043884,
+      0.05767792835831642,
+      0.0
+    ],
+    "right_middle": [
+      0.0,
+      -0.05767792835831642,
+      0.0
+    ],
+    "right_rear": [
+      -0.05297550559043884,
+      -0.05767792835831642,
+      0.0
+    ]
+  },
+  "notes": [
+    "Original GLB unchanged.",
+    "MuJoCo scale calibrated to previous STEP wheel diameter 42.248 mm.",
+    "Six rigid wheel groups extracted from skin weights, no skin animation.",
+    "Scan effect planes omitted. Base-color textures retained; normal/ORM/emission maps remain in original GLB only.",
+    "Mass split and body collision/inertia are approximate."
+  ]
+}

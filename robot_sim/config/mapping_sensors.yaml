@@ -1,0 +1,36 @@
+# Assumptions for an uncalibrated small indoor rover; not manufacturer specs.
+seed: 29
+lidar:
+  range_min_m: 0.12
+  range_max_m: 6.0
+  resolution_m: 0.005
+  white_std_m: 0.010
+  range_std_fraction: 0.002
+  fixed_range_bias_m: 0.005
+  yaw_calibration_error_rad: 0.00349
+  beam_dropout_probability: 0.02
+  outlier_probability: 0.003
+  message_dropout_probability: 0.01
+  latency_s: 0.045
+  jitter_s: 0.010
+imu:
+  gyro_std_rad_s: 0.006
+  gyro_bias_rad_s: 0.003
+  gyro_bias_walk_std: 0.0001
+  acceleration_std_m_s2: 0.08
+  latency_s: 0.015
+  jitter_s: 0.005
+wheel:
+  left_radius_scale: 1.010
+  right_radius_scale: 0.992
+  track_scale: 1.010
+  ticks_per_revolution: 2048
+  latency_s: 0.025
+  jitter_s: 0.005
+camera:
+  image_std: 1.5
+  jpeg_quality: 85
+  focal_calibration_scale: 1.003
+  message_dropout_probability: 0.02
+  latency_s: 0.070
+  jitter_s: 0.010
