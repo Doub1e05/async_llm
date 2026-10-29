@@ -40,6 +40,12 @@ if [[ ! -x "$ROBOT_LLM_PYTHON" ]]; then
     echo "LLM Python not found: $ROBOT_LLM_PYTHON; set ROBOT_LLM_PYTHON or ROBOT_CONDA_ENV" >&2
     exit 2
 fi
+# JIT builders invoke helpers (notably ninja) by name, even without conda activate.
+export PATH="$(dirname "$ROBOT_LLM_PYTHON"):$PATH"
+if [[ -z "${CUDA_HOME:-}" && -x /usr/local/cuda-13.0/bin/nvcc ]]; then
+    export CUDA_HOME=/usr/local/cuda-13.0
+fi
+if [[ -n "${CUDA_HOME:-}" ]]; then export PATH="$CUDA_HOME/bin:$PATH"; fi
 export HF_HUB_OFFLINE=1
 mkdir -p "$XDG_CACHE_HOME"
 exec /usr/bin/python3 -m robot_sim.resource_limits "$ROBOT_LLM_PYTHON" -u robot_sim/scripts/llm_server.py --model "$MODEL" "${@}"
