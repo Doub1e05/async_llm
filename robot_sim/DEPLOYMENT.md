@@ -16,7 +16,7 @@ cd async_llm
 conda env create -f robot_sim/environment_double_p.yml
 conda activate double_p
 python -m pip install uv
-uv pip install -e ".[dev]"
+uv pip install -c robot_sim/constraints.txt -e ".[dev]"
 uv pip install gymnasium vizdoom websockify
 ```
 
