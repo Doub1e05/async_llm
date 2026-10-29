@@ -50,7 +50,13 @@ class TransformersPolicy:
                     return recursively_apply(transfer, inputs), recursively_apply(transfer, keywords)
 
                 self.bridge_hooks.append(module.register_forward_pre_hook(stage, with_kwargs=True))
-        mapping = self.model.hf_device_map
+        mapping = getattr(self.model, "hf_device_map", None)
+        if mapping is None:
+            # Transformers may omit Accelerate metadata for an unsharded model.
+            devices = {str(parameter.device) for parameter in self.model.parameters()}
+            if len(devices) != 1:
+                raise RuntimeError("Sharded model is missing its device map")
+            mapping = {"": devices.pop()}
         if any(str(device) in {"cpu", "disk"} for device in mapping.values()):
             raise RuntimeError("CPU/disk weight offload is not allowed for this experiment")
         self.input_device = self.model.get_input_embeddings().weight.device
